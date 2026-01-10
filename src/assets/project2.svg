@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="360" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="360" fill="#041226"/>
+  <rect x="32" y="32" width="536" height="296" rx="12" fill="#071430" stroke="#08305a" stroke-width="2"/>
+  <circle cx="140" cy="120" r="44" fill="#0b2446" />
+  <rect x="220" y="96" width="260" height="28" rx="6" fill="#07213a" />
+  <g fill="#34d399" font-family="Arial" font-size="28" font-weight="700">
+    <text x="50" y="220">Project Two</text>
+  </g>
+</svg>

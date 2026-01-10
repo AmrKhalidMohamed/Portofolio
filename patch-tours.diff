@@ -1,0 +1,9 @@
+﻿*** Begin Patch
+*** Update File: src/data/tours.js
+@@
+-    location: 'Luxor  Aswan',
++    location: 'Luxor, Aswan',
+@@
+-    location: 'Cairo  Giza  Alexandria',
++    location: 'Cairo, Giza, Alexandria',
+*** End Patch

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="360" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="360" fill="#081026"/>
+  <rect x="36" y="36" width="528" height="288" rx="16" fill="#081526" stroke="#122a55" stroke-width="2"/>
+  <path d="M60 120h120v16H60z" fill="#0b2a4d"/>
+  <path d="M60 152h420v12H60z" fill="#07213a"/>
+  <g fill="#f59e0b" font-family="Arial" font-size="28" font-weight="700">
+    <text x="50" y="240">Project Three</text>
+  </g>
+</svg>
