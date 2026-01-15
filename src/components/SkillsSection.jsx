@@ -1,33 +1,22 @@
 import React from "react"
-import {
-  ReactIcon,
-  JavaScriptIcon,
-  TailwindIcon,
-  NodeIcon,
-  LaravelIcon,
-  MySqlIcon,
-  GitIcon,
-  FigmaIcon,
-  ReactNativeIcon,
-  RestApiIcon,
-} from "tech-stack-icons"
+import StackIcon from "tech-stack-icons"
 
 const skills = {
   frontend: [
-    { name: "React", icon: ReactIcon },
-    { name: "Tailwind CSS", icon: TailwindIcon },
-    { name: "JavaScript", icon: JavaScriptIcon },
-    { name: "React Native", icon: ReactNativeIcon },
+    { name: "React", icon: "react" },
+    { name: "Tailwind CSS", icon: "tailwindcss" },
+    { name: "JavaScript", icon: "javascript" },
+    { name: "React Native", icon: "react" },
   ],
   backend: [
-    { name: "Node.js", icon: NodeIcon },
-    { name: "Laravel", icon: LaravelIcon },
-    { name: "MySQL", icon: MySqlIcon },
-    { name: "REST APIs", icon: RestApiIcon },
+    { name: "Node.js", icon: "nodejs" },
+    { name: "Laravel", icon: "laravel" },
+    { name: "MySQL", icon: "mysql" },
+    { name: "REST APIs", icon: "rest" },
   ],
   tools: [
-    { name: "Git", icon: GitIcon },
-    { name: "Figma", icon: FigmaIcon },
+    { name: "Git", icon: "git" },
+    { name: "Figma", icon: "figma" },
   ],
 }
 
@@ -44,15 +33,12 @@ export default function SkillsSection() {
                 {category.charAt(0).toUpperCase() + category.slice(1)}
               </h3>
               <div className="skills-badges">
-                {items.map((skill) => {
-                  const Icon = skill.icon
-                  return (
-                    <div key={skill.name} className="skill-badge">
-                      <Icon className="skill-icon" />
-                      <span className="skill-name">{skill.name}</span>
-                    </div>
-                  )
-                })}
+                {items.map((skill) => (
+                  <div key={skill.name} className="skill-badge">
+                    <StackIcon name={skill.icon} className="skill-icon" variant="dark" />
+                    <span className="skill-name">{skill.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
