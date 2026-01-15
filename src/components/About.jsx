@@ -10,7 +10,7 @@ export default function About() {
         <ul className="education-list">
           <li>
             <strong>Bachelor of Science in Computer Science</strong>
-            <p>University Name, 2018 – 2022</p>
+            <p>October the 6th university, 2020 – 2024</p>
           </li>
           <li>
             <strong>High School Diploma</strong>
@@ -24,7 +24,7 @@ export default function About() {
         <ul className="contact-list">
           <li>
             <strong>Email:</strong>{' '}
-            <a href="mailto:your.email@example.com">your.email@example.com</a>
+            <a href="mailto:amrkfawzy@gmail.com">amrkfawzy@gmail.com</a>
           </li>
           <li>
             <strong>Phone:</strong>{' '}
@@ -32,8 +32,8 @@ export default function About() {
           </li>
           <li>
             <strong>LinkedIn:</strong>{' '}
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
-              linkedin.com/in/yourprofile
+            <a href="https://www.linkedin.com/in/amr-k-fawzy-5a9222393" target="_blank" rel="noreferrer">
+              linkedin.com/in/amr-k-fawzy-5a9222393
             </a>
           </li>
           <li>

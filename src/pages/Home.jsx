@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react"
+﻿import React, { useState, useEffect } from "react"
 import HeroSection from "../components/HeroSection"
 import WorkSection from "../components/WorkSection"
-import About from "./About"
+import About from "../components/About"
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0)
