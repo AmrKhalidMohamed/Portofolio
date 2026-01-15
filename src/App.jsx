@@ -8,6 +8,9 @@ import './index.css'
 export default function App() {
   return (
     <>
+      {/* Top blur gradient */}
+      <div className="top-blur-gradient" />
+      
       {/* Shooting stars */}
       <div className="shooting-star shooting-star-1" />
       <div className="shooting-star shooting-star-2" />

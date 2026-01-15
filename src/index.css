@@ -175,8 +175,8 @@ body::after {
 
 .card {
   background: var(--light-glass);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 1rem;
   border-radius: 12px;
@@ -242,6 +242,22 @@ body::after {
 }
 
 
+
+/* Top blur gradient overlay */
+.top-blur-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+  pointer-events: none;
+  z-index: 999;
+}
 /* Navbar - Centered Glassmorphism */
 .navbar-wrapper {
   position: fixed;
@@ -361,7 +377,7 @@ body::after {
   flex: 1;
 }
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 3.25rem;
   margin: 0 0 0.5rem 0;
   line-height: 1.2;
 }
@@ -371,7 +387,7 @@ body::after {
   font-size: 1.15em;
 }
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--muted);
   margin: 0 0 1rem 0;
 }
@@ -425,6 +441,7 @@ body::after {
   object-position: top;
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  pointer-events: none;
 }
 
 /* Work Section */
@@ -615,3 +632,4 @@ body::after {
 @keyframes caretBlink {
   50% { opacity: 0; }
 }
+
