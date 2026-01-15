@@ -776,3 +776,52 @@ body::after {
     padding: 1rem;
   }
 }
+
+/* Contact Icons */
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(79, 70, 229, 0.15);
+  color: var(--accent);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-icon-link:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.4), inset 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.contact-icon-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .contact-icons {
+    gap: 1rem;
+  }
+
+  .contact-icon-link {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-icon-link svg {
+    width: 20px;
+    height: 20px;
+  }
+}
