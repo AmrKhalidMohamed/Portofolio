@@ -72,7 +72,7 @@ export default function HeroSection({ scrollY }) {
           </p>
           <div className="hero-cta">
             <a href="#work" className="btn btn-primary">View My Work</a>
-            <a href="#about" className="btn btn-secondary">About Me</a>
+            <a href="#about" className="btn btn-secondary">Contact Me</a>
           </div>
         </div>
         <div
