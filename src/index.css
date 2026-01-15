@@ -640,6 +640,7 @@ body::after {
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  margin-bottom: 10rem;
 }
 
 .about-page h1 {
