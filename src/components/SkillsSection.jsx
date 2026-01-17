@@ -5,14 +5,18 @@ const skills = {
   frontend: [
     { name: "React", icon: "react" },
     { name: "Tailwind CSS", icon: "tailwindcss" },
-    { name: "JavaScript", icon: "javascript" },
-    { name: "React Native", icon: "react" },
+    { name: "JavaScript", icon: "js" },
+    { name: "TypeScript", icon: "typescript" },
   ],
   backend: [
-    { name: "Node.js", icon: "nodejs" },
+    { name: "Php", icon: "php" },
     { name: "Laravel", icon: "laravel" },
+    { name: "Node.js", icon: "nodejs" },
     { name: "MySQL", icon: "mysql" },
-    { name: "REST APIs", icon: "rest" },
+  ],
+  mobile: [
+    { name: "React Native", icon: "react" },
+    { name: "Expo", icon: "expo" },
   ],
   tools: [
     { name: "Git", icon: "git" },
@@ -35,7 +39,9 @@ export default function SkillsSection() {
               <div className="skills-badges">
                 {items.map((skill) => (
                   <div key={skill.name} className="skill-badge">
+                    <div className="icon-size">
                     <StackIcon name={skill.icon} className="skill-icon" variant="dark" />
+                    </div>
                     <span className="skill-name">{skill.name}</span>
                   </div>
                 ))}
