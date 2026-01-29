@@ -53,7 +53,7 @@ export default function About() {
 
   return (
     <section id="about" className="about-page">
-      <h1>About Me</h1>
+      <h1 className='section-title'>About Me</h1>
 
       <div className="about-section">
         <h2>Education</h2>

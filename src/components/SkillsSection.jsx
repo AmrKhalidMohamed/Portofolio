@@ -4,6 +4,7 @@ import StackIcon from "tech-stack-icons"
 const skills = {
   frontend: [
     { name: "React", icon: "react" },
+    { name: "Vite", icon: "vitejs" },
     { name: "Tailwind CSS", icon: "tailwindcss" },
     { name: "JavaScript", icon: "js" },
     { name: "TypeScript", icon: "typescript" },

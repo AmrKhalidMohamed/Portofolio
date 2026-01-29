@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
+import StackIcon from "tech-stack-icons"
 import projectsData from "../data/projects"
 
 const ExternalLinkIcon = () => (
@@ -33,66 +34,131 @@ const PlaystoreIcon = () => (
 )
 
 export default function WorkSection() {
+  const cardsRef = useRef([])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("card-visible")
+          }
+        })
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px"
+      }
+    )
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section id="work" className="work-section">
-      <h2>My Work</h2>
-      <div className="projects">
-        {projectsData.map((project) => (
-          <article key={project.id} className="card">
-            <div
-              className="thumb"
-              style={{ backgroundImage: `url(${project.image})` }}
-            ></div>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <div className="project-links">
-              {project.demoUrl && project.demoUrl !== "#" && (
-                <a
-                  className="project-icon-link"
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="View Demo"
+      <div className="container">
+        <h2 className="section-title">My Work</h2>
+        <div className="projects-large">
+          {projectsData.map((project, index) => (
+            <article
+              key={project.id}
+              className="card-large"
+              ref={(el) => (cardsRef.current[index] = el)}
+            >
+              <div className="card-large-content">
+                <div 
+                  className="card-large-image-wrapper"
+                  style={{
+                    background: `linear-gradient(${project.accentGradient})`
+                  }}
+                  
                 >
-                  <ExternalLinkIcon />
-                </a>
-              )}
-              {project.playstoreUrl && project.playstoreUrl !== "#" && (
-                <a
-                  className="project-icon-link"
-                  href={project.playstoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Play Store"
-                >
-                  <PlaystoreIcon />
-                </a>
-              )}
-              {project.appStoreUrl && project.appStoreUrl !== "#" && (
-                <a
-                  className="project-icon-link"
-                  href={project.appStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="App Store"
-                >
-                  <AppleIcon />
-                </a>
-              )}
-              {project.githubUrl && project.githubUrl !== "#" && (
-                <a
-                  className="project-icon-link"
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="View on GitHub"
-                >
-                  <GitHubIcon />
-                </a>
-              )}
-            </div>
-          </article>
-        ))}
+                    <p 
+                    className="card-large-image-title"
+                    style={{
+                      color: project.accentColor
+                    }}
+                    >{project.imageTitle}</p>
+                  <div className="card-large-images-container">
+                    <div
+                      className="card-large-image card-large-image-main"
+                      style={{ backgroundImage: `url(${project.image})` }}
+                    ></div>
+                    <div
+                      className="card-large-image card-large-image-hover"
+                      style={{ backgroundImage: `url(${project.hoverImage})` }}
+                    ></div>
+                  </div>
+                </div>
+                <div className="card-large-info">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  
+                  {project.techStack && (
+                    <div className="tech-stack">
+                      {project.techStack.map((tech) => (
+                        <div key={tech} className="tech-icon-wrapper">
+                          <StackIcon name={tech} className="tech-icon" variant="dark"/>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="project-links">
+                    {project.demoUrl && project.demoUrl !== "#" && (
+                      <a
+                        className="project-icon-link"
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="View Demo"
+                      >
+                        <ExternalLinkIcon />
+                      </a>
+                    )}
+                    {project.playstoreUrl && project.playstoreUrl !== "#" && (
+                      <a
+                        className="project-icon-link"
+                        href={project.playstoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Play Store"
+                      >
+                        <PlaystoreIcon />
+                      </a>
+                    )}
+                    {project.appStoreUrl && project.appStoreUrl !== "#" && (
+                      <a
+                        className="project-icon-link"
+                        href={project.appStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="App Store"
+                      >
+                        <AppleIcon />
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        className="project-icon-link"
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="View on GitHub"
+                      >
+                        <GitHubIcon />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )
