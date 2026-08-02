@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "meta": {
+    "lastScanned": "2026-08-02T13:07:41.256Z",
+    "fileCount": 24,
+    "hits": 0,
+    "misses": 0,
+    "renderedHash": "be85ce40c2fa63bf818f78ddde59c4a8b22e8c11a6bcd4f2265e80617b55a23d",
+    "storeUpdatedAt": "2026-08-02T13:07:41.258Z"
+  },
+  "files": {
+    ".claude/commands/reframe.md": {
+      "description": "Mode: migrate [framework]",
+      "tokens": 551,
+      "hash": "17a75695be5d4629",
+      "size": 2221,
+      "mtimeMs": 1785676061072.359,
+      "updatedAt": "2026-08-02T13:07:41.085Z",
+      "source": "scan"
+    },
+    ".claude/commands/security-audit.md": {
+      "description": "Layer 1 — Dependencies",
+      "tokens": 510,
+      "hash": "e6f7e0b7337c9c86",
+      "size": 2060,
+      "mtimeMs": 1785676061062.589,
+      "updatedAt": "2026-08-02T13:07:41.085Z",
+      "source": "scan"
+    },
+    ".claude/rules/openwolf.md": {
+      "description": "",
+      "tokens": 328,
+      "hash": "6d735b2c1c54a916",
+      "size": 1323,
+      "mtimeMs": 1785676060867.334,
+      "updatedAt": "2026-08-02T13:07:41.086Z",
+      "source": "scan"
+    },
+    ".claude/settings.json": {
+      "description": "",
+      "tokens": 514,
+      "hash": "f68759bb50af5ee4",
+      "size": 1799,
+      "mtimeMs": 1785676060856.4841,
+      "updatedAt": "2026-08-02T13:07:41.086Z",
+      "source": "scan"
+    },
+    ".dockerignore": {
+      "description": "Docker ignore rules",
+      "tokens": 7,
+      "hash": "25a0b76c83c92720",
+      "size": 24,
+      "mtimeMs": 1770477838597.4187,
+      "updatedAt": "2026-08-02T13:07:41.093Z",
+      "source": "scan"
+    },
+    "CLAUDE.md": {
+      "description": "OpenWolf",
+      "tokens": 57,
+      "hash": "b1ca356fa9d5f3a6",
+      "size": 225,
+      "mtimeMs": 1785676060876.9302,
+      "updatedAt": "2026-08-02T13:07:41.094Z",
+      "source": "scan"
+    },
+    "Dockerfile": {
+      "description": "Docker container definition",
+      "tokens": 39,
+      "hash": "57fb67d44fa74946",
+      "size": 143,
+      "mtimeMs": 1770478796415.7231,
+      "updatedAt": "2026-08-02T13:07:41.101Z",
+      "source": "scan"
+    },
+    "GEMINI.md": {
+      "description": "OpenWolf",
+      "tokens": 68,
+      "hash": "8c90778623bf50ac",
+      "size": 271,
+      "mtimeMs": 1785676061051.63,
+      "updatedAt": "2026-08-02T13:07:41.101Z",
+      "source": "scan"
+    },
+    "index.html": {
+      "description": "Portfolio",
+      "tokens": 158,
+      "hash": "31d2c1fb3d7475d0",
+      "size": 592,
+      "mtimeMs": 1765909608491.152,
+      "updatedAt": "2026-08-02T13:07:41.110Z",
+      "source": "scan"
+    },
+    "package-lock.json": {
+      "description": "npm lock file",
+      "tokens": 22626,
+      "hash": "b1387c995eac47dc",
+      "size": 79188,
+      "mtimeMs": 1779901532991.3445,
+      "updatedAt": "2026-08-02T13:07:41.120Z",
+      "source": "scan"
+    },
+    "package.json": {
+      "description": "Node.js package manifest",
+      "tokens": 153,
+      "hash": "161bf979b7cad629",
+      "size": 535,
+      "mtimeMs": 1779901532965.355,
+      "updatedAt": "2026-08-02T13:07:41.121Z",
+      "source": "scan"
+    },
+    "src/App.jsx": {
+      "description": "App",
+      "tokens": 243,
+      "hash": "e1cf9710d0beea3f",
+      "size": 848,
+      "mtimeMs": 1779900162801.723,
+      "updatedAt": "2026-08-02T13:07:41.128Z",
+      "source": "scan"
+    },
+    "src/components/About.jsx": {
+      "description": "EmailIcon",
+      "tokens": 1176,
+      "hash": "099969f5e599c054",
+      "size": 4113,
+      "mtimeMs": 1768926331325.8525,
+      "updatedAt": "2026-08-02T13:07:41.143Z",
+      "source": "scan",
+      "symbols": [
+        {
+          "name": "EmailIcon",
+          "kind": "fn",
+          "startLine": 3,
+          "endLine": 9,
+          "tokens": 98
+        },
+        {
+          "name": "PhoneIcon",
+          "kind": "fn",
+          "startLine": 10,
+          "endLine": 15,
+          "tokens": 151
+        },
+        {
+          "name": "LinkedInIcon",
+          "kind": "fn",
+          "startLine": 16,
+          "endLine": 21,
+          "tokens": 188
+        },
+        {
+          "name": "GitHubIcon",
+          "kind": "fn",
+          "startLine": 22,
+          "endLine": 27,
+          "tokens": 250
+        },
+        {
+          "name": "About",
+          "kind": "fn",
+          "startLine": 28,
+          "endLine": 93,
+          "tokens": 455
+        }
+      ]
+    },
+    "src/components/HeroSection.jsx": {
+      "description": "phrases — uses useState, useEffect",
+      "tokens": 832,
+      "hash": "82aa9ff44e7b6d7e",
+      "size": 2911,
+      "mtimeMs": 1768518893496.411,
+      "updatedAt": "2026-08-02T13:07:41.154Z",
+      "source": "scan",
+      "symbols": [
+        {
+          "name": "HeroSection",
+          "kind": "fn",
+          "startLine": 6,
+          "endLine": 91,
+          "tokens": 774
+        }
+      ]
+    },
+    "src/components/Navbar.jsx": {
+      "description": "LINKS — uses useState, useRef, useEffect",
+      "tokens": 841,
+      "hash": "adc61eaa65395b0a",
+      "size": 2942,
+      "mtimeMs": 1779900162801.723,
+      "updatedAt": "2026-08-02T13:07:41.165Z",
+      "source": "scan",
+      "symbols": [
+        {
+          "name": "Navbar",
+          "kind": "fn",
+          "startLine": 9,
+          "endLine": 93,
+          "tokens": 763
+        }
+      ]
+    },
+    "src/components/SkillsSection.jsx": {
+      "description": "skills",
+      "tokens": 510,
+      "hash": "e01f02bbb1617f91",
+      "size": 1782,
+      "mtimeMs": 1768741739910.8557,
+      "updatedAt": "2026-08-02T13:07:41.176Z",
+      "source": "scan",
+      "symbols": [
+        {
+          "name": "SkillsSection",
+          "kind": "fn",
+          "startLine": 28,
+          "endLine": 57,
+          "tokens": 299
+        }
+      ]
+    },
+    "src/components/WorkSection.jsx": {
+      "description": "ExternalLinkIcon — uses useRef, useEffect",
+      "tokens": 2068,
+      "hash": "e8ada7c7597980b8",
+      "size": 7238,
+      "mtimeMs": 1769042618339.0789,
+      "updatedAt": "2026-08-02T13:07:41.188Z",
+      "source": "scan",
+      "symbols": [
+        {
+          "name": "ExternalLinkIcon",
+          "kind": "fn",
+          "startLine": 5,
+          "endLine": 12,
+          "tokens": 116
+        },
+        {
+          "name": "GitHubIcon",
+          "kind": "fn",
+          "startLine": 13,
+          "endLine": 18,
+          "tokens": 250
+        },
+        {
+          "name": "AppleIcon",
+          "kind": "fn",
+          "startLine": 19,
+          "endLine": 24,
+          "tokens": 207
+        },
+        {
+          "name": "PlaystoreIcon",
+          "kind": "fn",
+          "startLine": 25,
+          "endLine": 35,
+          "tokens": 166
+        },
+        {
+          "name": "WorkSection",
+          "kind": "fn",
+          "startLine": 36,
+          "endLine": 166,
+          "tokens": 1292
+        }
+      ]
+    },
+    "src/data/projects.js": {
+      "description": "Declares projects",
+      "tokens": 628,
+      "hash": "f0f60780f29461b2",
+      "size": 2195,
+      "mtimeMs": 1769623501794.7507,
+      "updatedAt": "2026-08-02T13:07:41.206Z",
+      "source": "scan"
+    },
+    "src/index.css": {
+      "description": "Styles: 44 rules, 7 vars, 1 media queries, 4 animations",
+      "tokens": 9243,
+      "hash": "e1d41a4dc1ae35e5",
+      "size": 32349,
+      "mtimeMs": 1779901634430.5984,
+      "updatedAt": "2026-08-02T13:07:41.207Z",
+      "source": "scan"
+    },
+    "src/main.jsx": {
+      "description": "",
+      "tokens": 108,
+      "hash": "e6a8e3469606f4e1",
+      "size": 376,
+      "mtimeMs": 1768663852187.1768,
+      "updatedAt": "2026-08-02T13:07:41.215Z",
+      "source": "scan"
+    },
+    "src/pages/Home.jsx": {
+      "description": "Home — uses useState, useEffect",
+      "tokens": 197,
+      "hash": "9af15000e693e0e7",
+      "size": 688,
+      "mtimeMs": 1768519131950.5413,
+      "updatedAt": "2026-08-02T13:07:41.224Z",
+      "source": "scan"
+    },
+    "src/pages/Resume.jsx": {
+      "description": "RESUME_URL",
+      "tokens": 331,
+      "hash": "1b85402d3501466c",
+      "size": 1157,
+      "mtimeMs": 1779903214982.1882,
+      "updatedAt": "2026-08-02T13:07:41.236Z",
+      "source": "scan"
+    },
+    "vercel.json": {
+      "description": "",
+      "tokens": 49,
+      "hash": "d528e0ab39bce341",
+      "size": 170,
+      "mtimeMs": 1768498593837.6438,
+      "updatedAt": "2026-08-02T13:07:41.242Z",
+      "source": "scan"
+    },
+    "vite.config.js": {
+      "description": "Vite build configuration",
+      "tokens": 63,
+      "hash": "8dd061b31342991b",
+      "size": 220,
+      "mtimeMs": 1764846705691.0405,
+      "updatedAt": "2026-08-02T13:07:41.251Z",
+      "source": "scan"
+    }
+  }
+}

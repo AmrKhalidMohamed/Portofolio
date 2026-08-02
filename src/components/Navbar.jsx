@@ -83,6 +83,9 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+        <a className="nav-resume-cta" href="/resume">
+          Resume
+        </a>
       </nav>
     </div>
   )
