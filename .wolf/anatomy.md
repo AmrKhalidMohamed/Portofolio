@@ -31,7 +31,7 @@
 ## src/
 
 - `App.jsx` — App (~243 tok)
-- `index.css` — Styles: 44 rules, 7 vars, 1 media queries, 4 animations (~9243 tok)
+- `index.css` — Styles: 45 rules, 7 vars, 1 media queries, 4 animations (~9260 tok)
 - `main.jsx` (~108 tok)
 
 ## src/components/
@@ -44,7 +44,7 @@
   - fn `About` L28-93 (~455 tok)
 - `HeroSection.jsx` — phrases — uses useState, useEffect (~832 tok)
   - fn `HeroSection` L6-91 (~774 tok)
-- `Navbar.jsx` — LINKS — uses useState, useRef, useEffect (~841 tok)
+- `Navbar.jsx` — LINKS — uses useState, useRef, useEffect, useLocation, useNavigate (~1010 tok)
   - fn `Navbar` L9-93 (~763 tok)
 - `SkillsSection.jsx` — skills (~510 tok)
   - fn `SkillsSection` L28-57 (~299 tok)
@@ -62,4 +62,4 @@
 ## src/pages/
 
 - `Home.jsx` — Home — uses useState, useEffect (~197 tok)
-- `Resume.jsx` — RESUME_URL (~331 tok)
+- `Resume.jsx` — RESUME_URL (~245 tok)

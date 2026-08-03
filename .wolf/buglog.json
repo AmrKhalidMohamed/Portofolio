@@ -1,4 +1,29 @@
 {
   "version": 1,
-  "bugs": []
+  "bugs": [
+    {
+      "id": "bug-001",
+      "timestamp": "2026-08-03T00:00:00.000Z",
+      "error_message": "PDF resume renders tiny inside the resume component instead of filling the .resume-frame-wrap div",
+      "file": "src/index.css",
+      "root_cause": "The <iframe class=\"resume-frame\"> had no CSS rule, so it rendered at the browser default iframe size (300x150px) instead of filling its container",
+      "fix": "Added a .resume-frame rule (flex: 1, width: 100%, border: 0, border-radius: 14px, background: #fff) and made .resume-frame-wrap a flex column so the iframe stretches to match the div at all breakpoints",
+      "tags": ["resume", "iframe", "css", "layout"],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "id": "bug-002",
+      "timestamp": "2026-08-03T00:00:00.000Z",
+      "error_message": "The app doesn't navigate back from the /resume page using the nav bar",
+      "file": "src/components/Navbar.jsx",
+      "root_cause": "Nav links (Home/Work/About + Portfolio brand) were pure in-page anchors using scrollIntoView on document.getElementById(id). Those sections only exist on the home page, so from /resume the element lookup returned null and the if(el) guard swallowed the click — nothing happened",
+      "fix": "Used useNavigate + useLocation. When pathname !== '/', nav clicks now navigate('/#<id>') and land on home; added an effect that reads location.hash on arrival and smooth-scrolls to the section (or top for hero). Also converted the Resume CTA to a <Link> for SPA navigation instead of a full page reload",
+      "tags": ["navbar", "navigation", "react-router", "resume"],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-03T00:00:00.000Z"
+    }
+  ]
 }

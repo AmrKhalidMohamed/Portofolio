@@ -423,7 +423,7 @@ body::after {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0.65rem 1.1rem;
+  padding: 0.5rem 1.1rem;
   background: var(--light-glass);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -526,7 +526,7 @@ body::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.62rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   text-decoration: none;
   font-size: 0.9rem;
@@ -553,14 +553,12 @@ body::after {
   padding: 4rem 0 6rem;
 }
 
-.resume-shell {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 1.5rem;
-  align-items: stretch;
+.resume-download {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
-.resume-copy,
 .resume-frame-wrap {
   background: var(--light-glass);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -568,128 +566,20 @@ body::after {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   box-shadow: 0 18px 48px rgba(2, 8, 23, 0.28);
-}
-
-.resume-copy {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.resume-eyebrow {
-  margin: 0 0 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
-.resume-copy h1 {
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1.05;
-}
-
-.resume-copy p {
-  color: var(--muted);
-  line-height: 1.7;
-  font-size: 1rem;
-  max-width: 52ch;
-}
-
-.resume-alert {
-  margin-top: 0.75rem;
-  padding: 1rem 1.1rem;
-  border-radius: 16px;
-  background: rgba(250, 204, 21, 0.1);
-  border: 1px solid rgba(250, 204, 21, 0.2);
-  color: #f8fafc;
-}
-
-.resume-actions {
-  display: flex;
-  gap: 0.85rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-
-.resume-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0.75rem 1.15rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
-}
-
-.resume-button:hover {
-  transform: translateY(-2px);
-}
-
-.resume-button-primary {
-  background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
-  color: #fff;
-  box-shadow: 0 14px 30px rgba(34, 211, 238, 0.2);
-}
-
-.resume-button-secondary {
-  color: #e6eef8;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.resume-frame-wrap {
   padding: 1rem;
   min-height: 760px;
-  max-height: min(80vh, 920px);
+  max-height: min(85vh, 1000px);
   overflow: auto;
-}
-
-.resume-pdf-viewer {
-  display: grid;
-  gap: 1rem;
-}
-
-.resume-pdf-page {
   display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  padding: 0.9rem;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 12px 30px rgba(2, 8, 23, 0.18);
 }
 
-.resume-pdf-page-label {
-  color: #0f1724;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.resume-pdf-canvas {
+.resume-frame {
+  flex: 1;
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
+  min-height: 0;
+  border: 0;
+  border-radius: 14px;
   background: #fff;
-}
-
-.resume-frame-empty {
-  display: grid;
-  place-items: center;
-  color: var(--muted);
-  text-align: center;
-  padding: 2rem;
 }
 
 .hero,
@@ -821,12 +711,6 @@ body::after {
   .hero-image img {
     width: 220px;
     height: 280px;
-  }
-  .resume-shell {
-    grid-template-columns: 1fr;
-  }
-  .resume-copy {
-    padding: 1.5rem;
   }
   .resume-frame-wrap {
     min-height: 580px;

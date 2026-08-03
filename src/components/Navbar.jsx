@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 
 const LINKS = [
   { id: "hero", label: "Home" },
@@ -7,9 +8,27 @@ const LINKS = [
 ]
 
 export default function Navbar() {
+  const { pathname, hash } = useLocation()
+  const navigate = useNavigate()
   const [activeId, setActiveId] = useState("hero")
   const linksRef = useRef(null)
   const indicatorRef = useRef(null)
+
+  // After landing on the home page via navigation (e.g. from /resume),
+  // scroll to the requested section (or to the top for Home).
+  useEffect(() => {
+    if (pathname !== "/") return
+    const id = hash ? hash.slice(1) : "hero"
+    const raf = requestAnimationFrame(() => {
+      const el = document.getElementById(id)
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" })
+      } else {
+        window.scrollTo(0, 0)
+      }
+    })
+    return () => cancelAnimationFrame(raf)
+  }, [pathname, hash])
 
   useEffect(() => {
     const linksEl = linksRef.current
@@ -56,6 +75,12 @@ export default function Navbar() {
 
   const handleScrollTo = (id) => (event) => {
     event.preventDefault()
+    // Sections only exist on the home page. From /resume (or /about) we
+    // navigate home with the section hash and let the effect above scroll.
+    if (pathname !== "/") {
+      navigate(`/#${id}`)
+      return
+    }
     const el = document.getElementById(id)
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" })
@@ -67,14 +92,14 @@ export default function Navbar() {
     <div className="navbar-wrapper">
       <nav className="navbar">
         <div className="nav-brand">
-          <a href="#hero" onClick={handleScrollTo("hero")}>Portfolio</a>
+          <a href="/" onClick={handleScrollTo("hero")}>Portfolio</a>
         </div>
         <ul className="nav-links" ref={linksRef}>
           <span className="nav-indicator" ref={indicatorRef} aria-hidden="true" />
           {LINKS.map(({ id, label }) => (
             <li key={id}>
               <a
-                href={`#${id}`}
+                href={id === "hero" ? "/" : `/#${id}`}
                 onClick={handleScrollTo(id)}
                 className={activeId === id ? "active" : ""}
               >
@@ -83,9 +108,9 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <a className="nav-resume-cta" href="/resume">
+        <Link className="nav-resume-cta" to="/resume">
           Resume
-        </a>
+        </Link>
       </nav>
     </div>
   )
