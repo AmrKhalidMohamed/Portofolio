@@ -8,7 +8,7 @@
       "first_read": "2026-08-03T13:58:32.771Z"
     },
     "C:/Users/MISV/Documents/PortofolioProject/src/index.css": {
-      "count": 3,
+      "count": 14,
       "tokens": 9243,
       "first_read": "2026-08-03T13:58:44.131Z"
     },
@@ -23,7 +23,7 @@
       "first_read": "2026-08-03T14:09:44.430Z"
     },
     "C:/Users/MISV/Documents/PortofolioProject/src/components/Navbar.jsx": {
-      "count": 2,
+      "count": 4,
       "tokens": 841,
       "first_read": "2026-08-03T14:19:07.247Z"
     },
@@ -31,13 +31,18 @@
       "count": 1,
       "tokens": 108,
       "first_read": "2026-08-03T14:19:42.410Z"
+    },
+    "C:/Users/MISV/Documents/PortofolioProject/package.json": {
+      "count": 1,
+      "tokens": 153,
+      "first_read": "2026-08-03T14:43:45.736Z"
     }
   },
   "files_written": [],
   "edit_counts": {},
-  "anatomy_hits": 6,
+  "anatomy_hits": 7,
   "anatomy_misses": 0,
-  "repeated_reads_warned": 3,
+  "repeated_reads_warned": 16,
   "cerebrum_warnings": 0,
-  "stop_count": 3
+  "stop_count": 7
 }

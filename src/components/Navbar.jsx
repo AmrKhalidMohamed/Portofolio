@@ -11,8 +11,22 @@ export default function Navbar() {
   const { pathname, hash } = useLocation()
   const navigate = useNavigate()
   const [activeId, setActiveId] = useState("hero")
+  const [menuOpen, setMenuOpen] = useState(false)
+  const navbarRef = useRef(null)
   const linksRef = useRef(null)
   const indicatorRef = useRef(null)
+
+  const closeMenu = () => setMenuOpen(false)
+
+  // Close the mobile menu when clicking/touching outside the navbar.
+  useEffect(() => {
+    if (!menuOpen) return
+    const onDocClick = (e) => {
+      if (navbarRef.current && !navbarRef.current.contains(e.target)) closeMenu()
+    }
+    document.addEventListener("click", onDocClick)
+    return () => document.removeEventListener("click", onDocClick)
+  }, [menuOpen])
 
   // After landing on the home page via navigation (e.g. from /resume),
   // scroll to the requested section (or to the top for Home).
@@ -75,6 +89,7 @@ export default function Navbar() {
 
   const handleScrollTo = (id) => (event) => {
     event.preventDefault()
+    closeMenu()
     // Sections only exist on the home page. From /resume (or /about) we
     // navigate home with the section hash and let the effect above scroll.
     if (pathname !== "/") {
@@ -90,11 +105,25 @@ export default function Navbar() {
 
   return (
     <div className="navbar-wrapper">
-      <nav className="navbar">
+      <nav className="navbar" ref={navbarRef}>
         <div className="nav-brand">
           <a href="/" onClick={handleScrollTo("hero")}>Portfolio</a>
         </div>
-        <ul className="nav-links" ref={linksRef}>
+        <button
+          type="button"
+          className={`nav-toggle ${menuOpen ? "is-open" : ""}`}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((o) => !o)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <ul
+          className={`nav-links ${menuOpen ? "is-open" : ""}`}
+          ref={linksRef}
+        >
           <span className="nav-indicator" ref={indicatorRef} aria-hidden="true" />
           {LINKS.map(({ id, label }) => (
             <li key={id}>
@@ -107,8 +136,13 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+          <li className="nav-mobile-only">
+            <a className="nav-mobile-resume" href="/resume" onClick={closeMenu}>
+              Resume
+            </a>
+          </li>
         </ul>
-        <Link className="nav-resume-cta" to="/resume">
+        <Link className="nav-resume-cta" to="/resume" onClick={closeMenu}>
           Resume
         </Link>
       </nav>

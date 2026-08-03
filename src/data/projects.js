@@ -15,7 +15,7 @@ const projects = [
     imageTitle: "Tourism booking platform built with React & Laravel.",
     demoUrl: "https://madrid-app.vercel.app/",
     githubUrl: "https://github.com/AmrKhalidMohamed/madrid-app",
-    techStack: ["react", "vitejs", "tailwindcss", "laravel", "mysql"],
+    techStack: ["react", "vitejs", "tailwindcss", "laravel", "mysql", "vercel"],
     accentGradient:
       "135deg, rgba(120, 220, 100, 0.2) 0%, rgba(80, 180, 100, 0.1) 100%",
     accentColor: "rgba(80, 180, 100, 1)",
@@ -32,7 +32,7 @@ const projects = [
       "https://play.google.com/store/apps/details?id=com.amrkfawzy.AwesomeProject&pcampaignid=web_share",
     appStoreUrl: "https://apps.apple.com/us/app/al-malaab/id6736920852",
     githubUrl: "#",
-    techStack: ["react", "expo"],
+    techStack: ["react", "expo", "laravel", "mysql" ,"railway"],
     accentGradient:
       "135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%",
     accentColor: "rgba(139, 92, 246, 1)",
