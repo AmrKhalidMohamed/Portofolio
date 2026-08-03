@@ -2,19 +2,19 @@
   "version": 1,
   "created_at": "2026-08-02T13:07:40.690Z",
   "lifetime": {
-    "total_tokens_estimated": 73557,
-    "total_reads": 40,
+    "total_tokens_estimated": 84430,
+    "total_reads": 47,
     "total_writes": 0,
     "total_sessions": 2,
-    "anatomy_hits": 40,
+    "anatomy_hits": 47,
     "anatomy_misses": 0,
-    "repeated_reads_blocked": 62,
-    "estimated_savings_vs_bare_cli": 471840,
-    "real_input_tokens": 18520913,
-    "real_output_tokens": 190805,
-    "real_cache_read_tokens": 5533824,
+    "repeated_reads_blocked": 80,
+    "estimated_savings_vs_bare_cli": 596584,
+    "real_input_tokens": 24013196,
+    "real_output_tokens": 228465,
+    "real_cache_read_tokens": 6610176,
     "real_cache_creation_tokens": 0,
-    "real_api_calls": 413
+    "real_api_calls": 511
   },
   "sessions": [
     {
@@ -423,6 +423,72 @@
         "cache_read_input_tokens": 1076352,
         "cache_creation_input_tokens": 0,
         "api_calls": 93
+      }
+    },
+    {
+      "id": "session-2026-08-03-1654",
+      "agent": "claude",
+      "started": "2026-08-03T13:54:15.408Z",
+      "ended": "2026-08-03T16:44:07.069Z",
+      "reads": [
+        {
+          "file": "C:/Users/MISV/Documents/PortofolioProject/src/pages/Resume.jsx",
+          "tokens_estimated": 331,
+          "was_repeated": true,
+          "anatomy_had_description": false
+        },
+        {
+          "file": "C:/Users/MISV/Documents/PortofolioProject/src/index.css",
+          "tokens_estimated": 9243,
+          "was_repeated": true,
+          "anatomy_had_description": false
+        },
+        {
+          "file": "C:/Users/MISV/Documents/PortofolioProject/src/pages/Home.jsx",
+          "tokens_estimated": 197,
+          "was_repeated": false,
+          "anatomy_had_description": false
+        },
+        {
+          "file": "C:/Users/MISV/Documents/PortofolioProject/src/App.jsx",
+          "tokens_estimated": 0,
+          "was_repeated": false,
+          "anatomy_had_description": false
+        },
+        {
+          "file": "C:/Users/MISV/Documents/PortofolioProject/src/components/Navbar.jsx",
+          "tokens_estimated": 841,
+          "was_repeated": true,
+          "anatomy_had_description": false
+        },
+        {
+          "file": "C:/Users/MISV/Documents/PortofolioProject/src/main.jsx",
+          "tokens_estimated": 108,
+          "was_repeated": false,
+          "anatomy_had_description": false
+        },
+        {
+          "file": "C:/Users/MISV/Documents/PortofolioProject/package.json",
+          "tokens_estimated": 153,
+          "was_repeated": false,
+          "anatomy_had_description": false
+        }
+      ],
+      "writes": [],
+      "totals": {
+        "input_tokens_estimated": 10873,
+        "output_tokens_estimated": 0,
+        "reads_count": 7,
+        "writes_count": 0,
+        "repeated_reads_blocked": 18,
+        "anatomy_lookups": 7
+      },
+      "real_usage": {
+        "input_tokens": 5492283,
+        "output_tokens": 37660,
+        "cache_read_input_tokens": 1076352,
+        "cache_creation_input_tokens": 0,
+        "api_calls": 98
       }
     }
   ],

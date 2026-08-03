@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 // Served from the `public/` directory so the PDF has a deterministic,
 // non-hashed URL. The browser embeds it inline instead of downloading it.
 const RESUME_URL = "/Amr-Khalid-CV.pdf"
 
 export default function Resume() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <section className="resume-page">
       <div className="resume-download">

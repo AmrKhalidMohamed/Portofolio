@@ -18,3 +18,4 @@
 | 18:39 | Navbar mobile responsiveness reverted - user asked to revert changes | src/components/Navbar.jsx, src/index.css | reverted | ~0 |
 | 18:43 | Fixed navbar mobile responsiveness - scaled down font/padding to fit single row | src/index.css | fixed | ~0 |
 | 19:08 | Added empty space under about section - changed bottom padding from 0 to 8rem | src/index.css | fixed | ~0 |
+| 19:43 | Added auto scroll-to-top on Resume component mount | src/pages/Resume.jsx | fixed | ~0 |
